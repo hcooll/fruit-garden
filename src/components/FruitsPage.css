@@ -1,0 +1,167 @@
+.fruits-page {
+  padding: 80px 5% 40px;
+  min-height: 100vh;
+  background-color: var(--light-bg);
+}
+
+.fruits-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.fruits-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.fruits-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.filters {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #eee;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.filter-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-options select {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #eee;
+  border-radius: 25px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-options select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.fruits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fruit-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.fruit-card:hover {
+  transform: translateY(-10px);
+}
+
+.fruit-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.fruit-card:hover .fruit-image {
+  transform: scale(1.05);
+}
+
+.fruit-info {
+  padding: 1.5rem;
+}
+
+.fruit-info h3 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.fruit-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.season {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.price {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .fruits-page {
+    padding: 60px 5% 30px;
+  }
+
+  .fruits-header h1 {
+    font-size: 2rem;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .filter-options select {
+    width: 100%;
+  }
+
+  .fruits-grid {
+    grid-template-columns: 1fr;
+  }
+} 
