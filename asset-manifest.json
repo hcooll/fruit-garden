@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fruit-garden/static/css/main.4993bbef.css",
+    "main.js": "/fruit-garden/static/js/main.62175b22.js",
+    "static/js/453.ca5489b4.chunk.js": "/fruit-garden/static/js/453.ca5489b4.chunk.js",
+    "index.html": "/fruit-garden/index.html",
+    "main.4993bbef.css.map": "/fruit-garden/static/css/main.4993bbef.css.map",
+    "main.62175b22.js.map": "/fruit-garden/static/js/main.62175b22.js.map",
+    "453.ca5489b4.chunk.js.map": "/fruit-garden/static/js/453.ca5489b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4993bbef.css",
+    "static/js/main.62175b22.js"
+  ]
+}
