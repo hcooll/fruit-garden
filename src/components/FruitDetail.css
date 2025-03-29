@@ -1,0 +1,210 @@
+.fruit-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.fruit-detail-container {
+  background: white;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: rotate(90deg);
+}
+
+.fruit-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.fruit-detail-image {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+}
+
+.fruit-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.season-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.fruit-detail-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fruit-detail-info h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.price-tag {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.detail-section {
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.detail-section h2 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.detail-section p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.nutrition-grid, .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.nutrition-item, .info-item {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.value {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.action-buttons button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart {
+  background-color: #f8f9fa;
+  color: var(--primary-color);
+}
+
+.add-to-cart:hover {
+  background-color: #e9ecef;
+}
+
+.buy-now {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.buy-now:hover {
+  background-color: #43a047;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .fruit-detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .fruit-detail-image {
+    min-height: 300px;
+  }
+
+  .fruit-detail-info {
+    padding: 1.5rem;
+  }
+
+  .nutrition-grid, .info-grid {
+    grid-template-columns: 1fr;
+  }
+} 
